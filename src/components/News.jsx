@@ -26,7 +26,7 @@ function News({ simplified }) {
             className="search-news"
             placeholder="Search a Crypto"
             optionFilterProp="children"
-            onChange={(value) => console.log(value)}
+            onChange={(value) => setNewsCategory(value)}
             filterOption={(input, option) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
