@@ -3,7 +3,6 @@ import { Layout, Typography, Space } from "antd";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
-import Exchanges from "./components/Exchanges";
 import Cryptocurrencies from "./components/Cryptocurrencies";
 import News from "./components/News";
 import CoinDetails from "./components/CoinDetails";
@@ -19,7 +18,6 @@ function App() {
           <Layout>
             <Routes>
               <Route exact path="/" element={<HomePage />}></Route>
-              <Route exact path="/exchanges" element={<Exchanges />}></Route>
               <Route
                 exact
                 path="/cryptocurrencies"

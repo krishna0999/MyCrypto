@@ -6,18 +6,16 @@ import Cryptocurrencies from "./Cryptocurrencies";
 import News from "./News";
 
 import { useGetCryptosQuery } from "../sevices/cryptoApi";
-import { useGetCryptoNewsQuery } from "../sevices/cryptoNews";
+import Loader from "./Loader";
 
 const { Title } = Typography;
 
 function HomePage() {
   const { data, isFetching } = useGetCryptosQuery(100);
 
-  // const { data, isFetching } = useGetCryptosQuery(100);
-
   const globalStats = data?.data?.stats;
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
   return (
     <>
       <Title level={2} className="heading" style={{ padding: "1rem" }}>
